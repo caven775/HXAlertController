@@ -61,9 +61,9 @@
     };
 }
 
-- (HXAlertMaker *(^)(NSString *, UIAlertActionStyle, alertActionHanlder))action
+- (HXAlertMaker *(^)(NSString *, UIAlertActionStyle, alertActionHandler))action
 {
-    return ^(NSString *title, UIAlertActionStyle style, alertActionHanlder handler) {
+    return ^(NSString *title, UIAlertActionStyle style, alertActionHandler handler) {
         UIAlertAction *actionX = [UIAlertAction actionWithTitle:title
                                                           style:style
                                                         handler:handler];

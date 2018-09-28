@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^textFieldHandler)(UITextField *textField);
-typedef void (^alertActionHanlder)(UIAlertAction *action);
+typedef void (^alertActionHandler)(UIAlertAction *action);
 
 @interface HXAlertMaker : NSObject
 
 @property (nonatomic, copy, readonly) HXAlertMaker *(^title)(NSString *title);
 @property (nonatomic, copy, readonly) HXAlertMaker *(^message)(NSString *message);
 @property (nonatomic, copy, readonly) HXAlertMaker *(^preferredStyle)(UIAlertControllerStyle preferredStyle);
-@property (nonatomic, copy, readonly) HXAlertMaker *(^addTextField)(textFieldHandler handker);
-@property (nonatomic, copy, readonly) HXAlertMaker *(^action)(NSString *title, UIAlertActionStyle style, alertActionHanlder handler);
+@property (nonatomic, copy, readonly) HXAlertMaker *(^addTextField)(textFieldHandler handler);
+@property (nonatomic, copy, readonly) HXAlertMaker *(^action)(NSString *title, UIAlertActionStyle style, alertActionHandler handler);
 @property (nonatomic, strong, readonly) UIAlertController *(^show)(void);
 
 @end
